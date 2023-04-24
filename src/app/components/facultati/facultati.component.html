@@ -1,0 +1,29 @@
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th>Nume</th>
+      <th>Actiune</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let facultate of facultati">
+      <td>{{facultate.numeFacultate}}</td>
+      <th>
+        <button class="btn btn-delete" (click)="deleteFacultate(facultate.id)">
+          <span class="mdi mdi-delete mdi-24px"></span>
+          <span class="mdi mdi-delete-empty mdi-24px"></span>
+          <span>Delete</span>
+        </button>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+
+  <button class="button-67" role="button" routerLink="../add-facultate">Adaugă facultate</button>
+</div>
+
+
+
+
+

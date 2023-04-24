@@ -1,0 +1,30 @@
+<div class="container">
+  <table>
+    <thead>
+    <tr>
+      <th>Nume</th>
+      <th>Prenume</th>
+      <th>Specializare</th>
+      <th>Facultate</th>
+      <th>Actiune</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.nume}}</td>
+      <td>{{student.prenume}}</td>
+      <td>{{student.specializare?.numeSpecializare}}</td>
+      <td>{{student.specializare?.facultate?.numeFacultate}}</td>
+      <th>
+        <button class="btn btn-delete" (click)="deleteStudent(student.id)">
+        <span class="mdi mdi-delete mdi-24px"></span>
+        <span class="mdi mdi-delete-empty mdi-24px"></span>
+        <span>Delete</span>
+      </button>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+
+  <button class="button-67" role="button" routerLink="../add-students">Adaugă student</button>
+</div>

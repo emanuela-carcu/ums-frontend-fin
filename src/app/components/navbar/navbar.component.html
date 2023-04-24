@@ -1,0 +1,8 @@
+<div class="topnav">
+  <a *ngIf="isLoggedIn" routerLink="students">Student</a>
+  <a *ngIf="isLoggedIn" routerLink="facultati">Facultati</a>
+  <a *ngIf="isLoggedIn" routerLink="specializari">Specializare</a>
+  <a *ngIf="!isLoggedIn" routerLink="login">Login</a>
+  <a *ngIf="!isLoggedIn" routerLink="register">Register</a>
+  <a *ngIf="isLoggedIn" href class="nav-link" (click)="logout()">Log out</a>
+</div>

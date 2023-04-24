@@ -1,0 +1,24 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="container">
+  <form #addStudent="ngForm" (ngSubmit)="onClickSubmit(addStudent.value)" >
+    <p>Adaugă un student nou </p>
+    <input type="text" name="nume" placeholder="nume" ngModel><br>
+    <input type="text" name="prenume" placeholder="prenume" ngModel><br>
+    <select name="specializare" ngModel>
+      <option *ngFor = "let f of specializari" [ngValue]=f>{{f.numeSpecializare}}
+      </option>
+    </select>
+    <br>
+    <input type="submit" value="submit">
+  </form>
+
+  <div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>

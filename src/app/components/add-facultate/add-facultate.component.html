@@ -1,0 +1,18 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="container">
+  <form #addFacultate="ngForm" (ngSubmit)="onClickSubmit(addFacultate.value)" >
+    <p>Adaugă facultate nouă </p>
+    <input type="text" name="numeFacultate" placeholder="Facultate" ngModel><br>
+    <input type="submit" value="submit">
+  </form>
+
+  <div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>
